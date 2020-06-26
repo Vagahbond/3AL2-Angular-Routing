@@ -1,13 +1,28 @@
 <div class="container">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Servers</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Users</a>
+    </li>
+  </ul>
   <div class="row">
-    <div class="col-xs-12 col-md-8 col-md-offset-2">
-      <app-new-account (accountAdded)="onAccountAdded($event)"></app-new-account>
-      <hr>
-      <app-account
-        *ngFor="let acc of accounts; let i = index"
-        [account]="acc"
-        [id]="i"
-        (statusChanged)="onStatusChanged($event)"></app-account>
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <app-home></app-home>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <app-users></app-users>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <app-servers></app-servers>
     </div>
   </div>
 </div>
