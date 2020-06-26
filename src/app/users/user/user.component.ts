@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -16,6 +16,12 @@ export class UserComponent implements OnInit {
     const name = this.route.snapshot.paramMap.get('name');
 
     this.user = {id: +id, name};
+
+    this.route.paramMap.subscribe(
+      (paramMap: ParamMap) => {
+        this.user= {id: +paramMap.get('id'), name: paramMap.get('name')}
+      }
+    )
   }
 
 }
