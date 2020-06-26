@@ -1,28 +1,18 @@
 <div class="container">
   <ul class="nav">
     <li class="nav-item">
-      <a class="nav-link active" href="#">Home</a>
+      <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Servers</a>
+      <a class="nav-link" routerLinkActive="active" routerLink="servers">Servers</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Users</a>
+      <a class="nav-link" routerLinkActive="active" routerLink="users">Users</a>
     </li>
   </ul>
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <app-home></app-home>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <app-users></app-users>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <app-servers></app-servers>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
