@@ -8,8 +8,14 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
+  }
+
+
+  goToServerURL() {
+    this.router.navigate(['/servers'], {relativeTo: this.route});
   }
 }

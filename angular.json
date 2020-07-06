@@ -127,6 +127,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "router-project"
+    }
+  },
+  "defaultProject": "router-project",
+  "cli": {
+    "analytics": "c7f1cc72-6c47-4715-95b9-1fc7fd9439d8"
+  }
 }

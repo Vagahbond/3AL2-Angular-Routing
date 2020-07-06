@@ -19,7 +19,9 @@ export class UserComponent implements OnInit {
 
     this.route.paramMap.subscribe(
       (paramMap: ParamMap) => {
-        this.user= {id: +paramMap.get('id'), name: paramMap.get('name')}
+        this.user= {
+          id: +paramMap.get('id'), 
+          name: paramMap.get('name')}
       }
     )
   }
